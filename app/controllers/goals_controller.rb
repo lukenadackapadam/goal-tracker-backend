@@ -16,7 +16,7 @@ class GoalsController < ApplicationController
     if @goal.save
       render json: { message: "Goal created successfully!" }, status: :created
     else
-      render json: { message: "Please login first!" }, status: :bad_request
+      render json: { errors: @goal.errors.full_messages }, status: :bad_request
     end
   end
 
