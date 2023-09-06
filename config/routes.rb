@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  post "/sessions" => "sessions#create"
-
   post "/user" => "users#create"
+
+  post "/sessions" => "sessions#create"
 
   get "/goals" => "goals#index"
   post "/goals" => "goals#create"
