@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   get "/goals" => "goals#index"
   post "/goals" => "goals#create"
-  patch "/goals" => "goals#update"
+  patch "/goals/:id" => "goals#update"
+  delete "/goals/:id" => "goals#destroy"
 end

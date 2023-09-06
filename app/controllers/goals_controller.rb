@@ -34,4 +34,10 @@ class GoalsController < ApplicationController
       render json: { errors: @goal.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @goal = Goal.find_by(id: params[:id])
+    @goal.destroy
+    render json: { message: "Goal removed successfully!" }
+  end
 end
