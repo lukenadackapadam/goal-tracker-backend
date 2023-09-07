@@ -24,7 +24,7 @@ class GoalsController < ApplicationController
   def update
     @goal = Goal.find_by(id: params[:id])
     @goal.update(
-      user_id: params[:user_id] || @goal.user_id,
+      title: params[:title] || @goal.title,
       description: params[:description] || @goal.description,
       goal_type: params[:goal_type] || @goal.goal_type,
       completed: params[:completed] || @goal.completed,
