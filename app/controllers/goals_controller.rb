@@ -9,6 +9,7 @@ class GoalsController < ApplicationController
   def create
     @goal = Goal.new(
       user_id: current_user.id,
+      title: params[:title],
       description: params[:description],
       goal_type: params[:goal_type],
       completed: params[:completed],
